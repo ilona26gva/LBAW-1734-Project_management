@@ -1,0 +1,32 @@
+.navbar {
+    margin-bottom: 0;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 3px;
+    border-radius: 0;
+  }
+  .jumbotron { 
+      background-color: #7ABED3; /* Orange */
+      color: #ffffff;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .bg-darkgrey {
+      background-color: #323233;
+      color: #ffffff;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .logo {
+    font-size: 200px;
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+  }
