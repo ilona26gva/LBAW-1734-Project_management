@@ -17,9 +17,6 @@
   color: #FFF;
 }
 
-.home {
-  background: #f6f7fa;
-}
 
 #navigation {
   background: #19191a;
@@ -44,7 +41,7 @@
 .display-table-cell {
   display: table-cell;
   float: none;
-  height: 100%;
+  height: 100% ;
 }
 
 .navi a {
@@ -81,29 +78,4 @@
   width: 100%;
   background: rgba(0, 0, 0, 0) url("../images/search.png") no-repeat scroll 99% 12px;
   color: #8492af;
-}
-
-.add-project {
-  background: #5584ff none repeat scroll 0 0;
-  border-radius: 100px;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 10px 27px 10px 45px;
-  position: relative;
-}
-
-.add-project::before {
-  background: rgba(0, 0, 0, 0) url("../images/plus.png") no-repeat scroll 0 0;
-  content: "";
-  ;
-  height: 12px;
-  left: 17px;
-  position: absolute;
-  top: 12px;
-  width: 12px;
-}
-
-.add-project:hover {
-  color: #ffffff;
 }
