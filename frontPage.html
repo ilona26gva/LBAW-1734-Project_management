@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="CSS/frontPage.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="JS/frontPage.js"></script>
     <style>
     </style>
 </head>
 
-<body>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    
     <!-- Static navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -28,16 +30,16 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active">
-                        <a href "#">Home</a>
+                        <a href="#home">Home</a>
                     </li>
                     <li class>
-                        <a href "#">About Us</a>
+                        <a href="#about">About Us</a>
                     </li>
                     <li class>
-                        <a href "#">Projects</a>
+                        <a href="#projects">Projects</a>
                     </li>
                     <li class>
-                        <a href "#">Contact</a>
+                        <a href="#contacts">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -47,7 +49,7 @@
     <!-- navbar -->
 
     <!-- Main Jumbotron -->
-    <div class="jumbotron text-center">
+    <div id="home" class="jumbotron text-center">
         <h1>Vici</h1>
         <p>Don't let your projects take over.
             <strong>Conquer your world.</strong>
@@ -58,25 +60,6 @@
         </form>
     </div>
     <!-- Jumbotron -->
-
-
-    <!-- About Container -->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-8">
-                <h2>About Us</h2>
-                <h4>In today’s world, an online organizing system is essential for companies to manage their projects. Our application
-                    strives to group all the advantages of different systems, having an
-                    <strong>intuitive interface, easy to use, and to add and consult project information,</strong>
-                    all
-                    <strong>free</strong> of charge. It would be
-                    <strong>fit for all kinds of companies and associations,</strong> from marketing to web development and architecture.</h4>
-            </div>
-            <div class="col-sm-4">
-                <span class="glyphicon glyphicon-signal logo"></span>
-            </div>
-        </div>
-    </div>
 
     <!-- Modal Login -->
     <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -94,6 +77,10 @@
                     <!-- Begin # Login Form -->
                     <form id="login-form">
                         <div class="modal-body">
+                            <div id="div-register-msg">
+                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-register-msg">Enter your email and password</span>
+                            </div>
                             <input id="login_email" class="form-control" type="email" placeholder="Email" required>
                             <input id="login_password" class="form-control" type="password" placeholder="Password" required>
                             <div class="checkbox">
@@ -107,42 +94,23 @@
                                 <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
                             </div>
                             <div>
-                                <p>Don't have an account?<button id="login_register_btn" type="button" class="btn btn-link">Register</button></p>
+                                <p>Don't have an account?
+                                    <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
+                                </p>
                             </div>
                         </div>
                     </form>
                     <!-- End # Login Form -->
-
-                    <!-- Begin | Lost Password Form -->
-                    <form id="lost-form" style="display:none;">
-                        <div class="modal-body">
-                            <div id="div-lost-msg">
-                                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-lost-msg">Type your e-mail.</span>
-                            </div>
-                            <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
-                        </div>
-                        <div class="modal-footer">
-                            <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
-                            </div>
-                            <div>
-                                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
-                                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- End | Lost Password Form -->
 
                     <!-- Begin | Register Form -->
                     <form id="register-form" style="display:none;">
                         <div class="modal-body">
                             <div id="div-register-msg">
                                 <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-register-msg">Register an account.</span>
+                                <span id="text-register-msg">Register an account</span>
                             </div>
-                            <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
-                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input id="register_username" class="form-control" type="text" placeholder="Username" required>
+                            <input id="register_email" class="form-control" type="email" placeholder="E-Mail" required>
                             <input id="register_password" class="form-control" type="password" placeholder="Password" required>
                         </div>
                         <div class="modal-footer">
@@ -151,7 +119,6 @@
                             </div>
                             <div>
                                 <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
-                                <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
                             </div>
                         </div>
                     </form>
@@ -164,7 +131,27 @@
         </div>
     </div>
     <!-- END # MODAL LOGIN -->
-    <div class="container-fluid text-center bg-grey">
+
+    <!-- About Container -->
+    <div id="about" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>About Us</h2>
+                <h4>In today’s world, an online organizing system is essential for companies to manage their projects. Our application
+                    strives to group all the advantages of different systems, having an
+                    <strong>intuitive interface, easy to use, and to add and consult project information,</strong>
+                    all
+                    <strong>free</strong> of charge. It would be
+                    <strong>fit for all kinds of companies and associations,</strong> from marketing to web development and architecture.</h4>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-signal logo"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Container -->
+    <div id="projects" class="container-fluid text-center bg-grey">
         <h2>Projects</h2>
         <h4>Check what other people have achieved with the Vici app</h4>
         <div class="row text-center">
@@ -173,7 +160,7 @@
                     <p>
                         <strong>Project</strong>
                     </p>
-                    <p>Project Description</p>
+                    <p>Proident enim sint amet exercitation est aliquip ullamco elit proident ea commodo et pariatur dolore. Laborum eiusmod nostrud esse elit non occaecat duis est. Quis nisi proident nisi exercitation ut fugiat labore. Do dolore officia officia cillum irure laborum qui quis nostrud laborum. Aliqua sit aute labore aliqua nostrud incididunt sunt sunt consequat cillum dolor sint id. In in consequat adipisicing excepteur incididunt. Nulla esse aliquip mollit est anim duis reprehenderit qui ut labore.</p>
                 </div>
             </div>
             <div class="col-sm-6">
@@ -181,13 +168,29 @@
                     <p>
                         <strong>Project</strong>
                     </p>
-                    <p>Project Description</p>
+                    <p>Proident enim sint amet exercitation est aliquip ullamco elit proident ea commodo et pariatur dolore. Laborum eiusmod nostrud esse elit non occaecat duis est. Quis nisi proident nisi exercitation ut fugiat labore. Do dolore officia officia cillum irure laborum qui quis nostrud laborum. Aliqua sit aute labore aliqua nostrud incididunt sunt sunt consequat cillum dolor sint id. In in consequat adipisicing excepteur incididunt. Nulla esse aliquip mollit est anim duis reprehenderit qui ut labore.</p>
                 </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="thumbnail">
+                <p>
+                    <strong>Project</strong>
+                </p>
+                <p>Proident enim sint amet exercitation est aliquip ullamco elit proident ea commodo et pariatur dolore. Laborum eiusmod nostrud esse elit non occaecat duis est. Quis nisi proident nisi exercitation ut fugiat labore. Do dolore officia officia cillum irure laborum qui quis nostrud laborum. Aliqua sit aute labore aliqua nostrud incididunt sunt sunt consequat cillum dolor sint id. In in consequat adipisicing excepteur incididunt. Nulla esse aliquip mollit est anim duis reprehenderit qui ut labore.</p>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="thumbnail">
+                <p>
+                    <strong>Project</strong>
+                </p>
+                <p>Proident enim sint amet exercitation est aliquip ullamco elit proident ea commodo et pariatur dolore. Laborum eiusmod nostrud esse elit non occaecat duis est. Quis nisi proident nisi exercitation ut fugiat labore. Do dolore officia officia cillum irure laborum qui quis nostrud laborum. Aliqua sit aute labore aliqua nostrud incididunt sunt sunt consequat cillum dolor sint id. In in consequat adipisicing excepteur incididunt. Nulla esse aliquip mollit est anim duis reprehenderit qui ut labore.</p>
             </div>
         </div>
     </div>
     <!-- Contact Container -->
-    <div class="container-fluid bg-darkgrey">
+    <div id="contacts" class="container-fluid bg-darkgrey">
         <h2>CONTACT</h2>
         <p>
             <span class="glyphicon glyphicon-map-marker"></span> Porto, Portugal</p>
@@ -197,6 +200,7 @@
             <span class="glyphicon glyphicon-envelope"></span> geral@vici.pt</p>
     </div>
 
+    
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
