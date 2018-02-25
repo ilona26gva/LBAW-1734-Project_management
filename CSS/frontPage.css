@@ -1,55 +1,58 @@
 .navbar {
-    margin-bottom: 0;
-    z-index: 9999;
-    border: 0;
-    font-size: 12px !important;
-    line-height: 1.42857143 !important;
-    letter-spacing: 3px;
-    border-radius: 0;
-  }
-  .jumbotron { 
-      background-color: #7ABED3; /* Orange */
-      color: #ffffff;
-  }
-  .bg-grey {
-    background-color: #f6f6f6;
-  }
-  .bg-darkgrey {
-      background-color: #323233;
-      color: #ffffff;
-  }
-  .container-fluid {
-    padding: 60px 50px;
-  }
-  .logo {
-    font-size: 200px;
-  }
-  @media screen and (max-width: 768px) {
-    .col-sm-4 {
-      text-align: center;
-      margin: 25px 0;
-    }
-  }
-  .modal-backdrop {
-    z-index: 100000 !important;
-  }
-
-  .modal {
-    z-index: 100001 !important;
-  }
-  #login-modal .modal-dialog {
-    width: 350px;
+  margin-bottom: 0;
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 3px;
+  border-radius: 0;
 }
 
-#login-modal input[type=text], input[type=password] {
-	margin-top: 10px;
+.jumbotron {
+  background-color: #7ABED3;
+  /* Orange */
+  color: #ffffff;
+}
+
+.bg-grey {
+  background-color: #f6f6f6;
+}
+
+.bg-darkgrey {
+  background-color: #323233;
+  color: #ffffff;
+}
+
+.container-fluid {
+  padding: 60px 50px;
+}
+
+.logo {
+  font-size: 200px;
+}
+
+.modal-backdrop {
+  z-index: 100000 !important;
+}
+
+.modal {
+  z-index: 100001 !important;
+}
+
+#login-modal .modal-dialog {
+  width: 350px;
+}
+
+#login-modal input[type=text],
+input[type=password] {
+  margin-top: 10px;
 }
 
 #div-login-msg,
 #div-lost-msg,
 #div-register-msg {
-    border: 1px solid #dadfe1;
-    height: 30px;
-    line-height: 28px;
-    transition: all ease-in-out 500ms;
+  border: 1px solid #dadfe1;
+  height: 30px;
+  line-height: 28px;
+  transition: all ease-in-out 500ms;
 }
