@@ -1,18 +1,18 @@
 .navbar {
-    margin-bottom: 0;
-    z-index: 9999;
-    border: 0;
-    font-size: 12px !important;
-    line-height: 1.42857143 !important;
-    letter-spacing: 3px;
-    border-radius: 0;
-  }
-  .container-fluid {
-    padding: 60px 50px;
-  }
-  @media screen and (max-width: 768px) {
-    .col-sm-4 {
-      text-align: center;
-      margin: 25px 0;
-    }
-  }
+  margin-bottom: 0;
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 3px;
+  border-radius: 0;
+}
+
+.header-padding {
+  padding: 50px 10px 10px 40px;
+}
+
+.main-color-bg {
+  background-color: #7ABED3;
+  color: #FFF;
+}
