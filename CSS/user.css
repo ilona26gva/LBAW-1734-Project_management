@@ -16,3 +16,94 @@
   background-color: #7ABED3;
   color: #FFF;
 }
+
+.home {
+  background: #f6f7fa;
+}
+
+#navigation {
+  background: #19191a;
+}
+
+#navigation {
+  padding: 0;
+}
+
+.display-table {
+  display: table;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.display-table-row {
+  display: table-row;
+  height: 100%;
+}
+
+.display-table-cell {
+  display: table-cell;
+  float: none;
+  height: 100%;
+}
+
+.navi a {
+  border-bottom: 1px solid #19191a;
+  border-top: 1px solid #19191a;
+  color: #ffffff;
+  display: block;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 28px 20px;
+  text-decoration: none;
+}
+
+.navi i {
+  margin-right: 15px;
+  color: #7ABED3;
+}
+
+.navi .active a {
+  background: #19191a;
+  border-left: 5px solid #7ABED3;
+}
+
+.navi a:hover {
+  background: #19191a none repeat scroll 0 0;
+  border-left: 5px solid #7ABED3;
+  display: block;
+}
+
+.search input {
+  border: none;
+  font-size: 15px;
+  padding: 15px 9px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0) url("../images/search.png") no-repeat scroll 99% 12px;
+  color: #8492af;
+}
+
+.add-project {
+  background: #5584ff none repeat scroll 0 0;
+  border-radius: 100px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 27px 10px 45px;
+  position: relative;
+}
+
+.add-project::before {
+  background: rgba(0, 0, 0, 0) url("../images/plus.png") no-repeat scroll 0 0;
+  content: "";
+  ;
+  height: 12px;
+  left: 17px;
+  position: absolute;
+  top: 12px;
+  width: 12px;
+}
+
+.add-project:hover {
+  color: #ffffff;
+}
